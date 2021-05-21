@@ -20,9 +20,10 @@ RUN \
  apk add --no-cache \
 	git \
 	ffmpeg \
-	py-pip \
+	libmediainfo \
 	python2 \
 	python3 \
+	py-pip \
 	python2-dev \
 	python3-dev \
 	libffi-dev \
@@ -32,7 +33,7 @@ RUN \
 	abuild \
 	binutils \
 	cmake && \
- pip install --upgrade pip && \
+ pip install --upgrade "pip" && \
  pip install wheel && \
  pip install setuptools && \
  pip install requests && \

@@ -20,7 +20,7 @@ RUN \
 	ffmpeg \
 	py-pip \
 	python3 \
-	python-dev \
+	python2-dev \
 	python3-dev \
 	libffi-dev \
 	openssl-dev \
@@ -47,7 +47,7 @@ RUN \
  pip install "subliminal<2" && \
  pip install stevedore==1.19.1 && \
  apk del --no-cache \
-	python-dev \
+	python2-dev \
 	python3-dev \
 	libffi-dev \
 	openssl-dev \

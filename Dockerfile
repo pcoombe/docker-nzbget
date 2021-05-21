@@ -18,8 +18,10 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 # install packages
 RUN \
  apk add --no-cache \
+	git \
 	ffmpeg \
 	py-pip \
+	python2 \
 	python3 \
 	python2-dev \
 	python3-dev \
@@ -29,7 +31,6 @@ RUN \
 	gcc \
 	abuild \
 	binutils \
-	git \
 	cmake && \
  pip install --upgrade pip && \
  pip install wheel && \

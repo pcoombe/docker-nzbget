@@ -5,14 +5,15 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.name="Nzbget" \
+    org.label-schema.name="NZBGet" \
     org.label-schema.description="Nzbget container with dependencies for sickbeard_mp4_automator" \
-    org.label-schema.url="http://ullberg.us/docker/nzbget" \
+    org.label-schema.url="https://github.com/pcoombe/docker-nzbget" \
     org.label-schema.vcs-ref=$VCS_REF \
     org.label-schema.vcs-url="https://github.com/pcoombe/docker-nzbget" \
     org.label-schema.vendor="pcoombe" \
     org.label-schema.version=$VERSION \
-    org.label-schema.schema-version="1.0"
+    org.label-schema.schema-version="1.0" \    
+    org.opencontainers.image.source="https://github.com/pcoombe/docker-nzbget"
 
 # install packages
 RUN \
@@ -31,6 +32,7 @@ RUN \
 	git \
 	cmake && \
  pip install --upgrade pip && \
+ pip install wheel && \
  pip install setuptools && \
  pip install requests && \
  pip install requests[security] && \

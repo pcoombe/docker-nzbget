@@ -3,7 +3,7 @@ name: publish
 on: [push]
 
 jobs:
-  publish-hello-world-image:
+  publish-nzbget-image:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +19,6 @@ jobs:
     - name: Build the NZBGet Docker image
       run: |
         docker build . --tag ghcr.io/pcoombe/nzbget:latest
-        docker run ghcr.io/pcoombe/nzbget:latest
+        #docker run ghcr.io/pcoombe/nzbget:latest
         docker push ghcr.io/pcoombe/nzbget:latest
 

@@ -1,7 +1,16 @@
 name: publish
 
-on: [push]
+on:
+  push:
+    branches:
+      - 'master'
+  schedule:
+    - cron:  '0 15 * * 5'
 
+env:
+  tag: latest
+  project: docker-nzbget
+  
 jobs:
   publish-nzbget-image:
     runs-on: ubuntu-latest

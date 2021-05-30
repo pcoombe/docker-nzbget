@@ -23,7 +23,7 @@ RUN \
 	libmediainfo \
 	python2 \
 	python3 \
-	py-pip \
+	py-pip
 	
 # install development and python packages
 RUN \
@@ -68,4 +68,4 @@ RUN \
 # link ffmpeg
 RUN \	
  ln -s /usr/bin/ffmpeg /usr/local/bin/ffmpeg && \
- ln -s /usr/bin/ffprobe /usr/local/bin/ffprobe  \
+ ln -s /usr/bin/ffprobe /usr/local/bin/ffprobe

@@ -5,3 +5,4 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/ullbergm/nzbget.svg)]()
 [![Docker Stars](https://img.shields.io/docker/stars/ullbergm/nzbget.svg)]()
 
+[![publish](https://github.com/pcoombe/docker-nzbget/actions/workflows/publish.yml/badge.svg)](https://github.com/pcoombe/docker-nzbget/actions/workflows/publish.yml)

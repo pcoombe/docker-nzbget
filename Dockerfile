@@ -1,4 +1,4 @@
-FROM linuxserver/nzbget
+FROM linuxserver/nzbget:v21.1-ls130
 MAINTAINER pcoombe
 
 ARG BUILD_DATE

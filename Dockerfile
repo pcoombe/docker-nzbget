@@ -21,14 +21,14 @@ RUN \
 	git \
 	ffmpeg \
 	libmediainfo \
-	python2 \
+	# python2 \
 	python3 \
 	py-pip
 	
 # install development and python packages
 RUN \
  apk add --no-cache \
-	python2-dev \
+	# python2-dev \
 	python3-dev \
 	libffi-dev \
 	openssl-dev \
@@ -55,7 +55,7 @@ RUN \
  pip install "subliminal<2" && \
  pip install stevedore==1.19.1 && \
  apk del --no-cache \
-	python2-dev \
+	# python2-dev \
 	python3-dev \
 	libffi-dev \
 	openssl-dev \

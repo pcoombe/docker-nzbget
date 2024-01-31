@@ -54,6 +54,7 @@ RUN \
  pip install qtfaststart && \
  pip install "subliminal<2" && \
  pip install stevedore==1.19.1 && \
+ pip install plexapi && \
  apk del --no-cache \
 	# python2-dev \
 	python3-dev \

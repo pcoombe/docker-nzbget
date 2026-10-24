@@ -34,7 +34,7 @@ Images are versioned automatically on every push to master:
 ## Registry
 Images published to **GitHub Container Registry**:
 ```
-ghcr.io/pcoombe/docker-nzbget
+ghcr.io/pcoombe/nzbget
 ```
 
 ## Build Arguments

@@ -1,4 +1,4 @@
-# docker-nzbget
+# nzbget
 
 NZBGet Docker container with dependencies for **sickbeard_mp4_automator** and other post-processing scripts.
 
@@ -52,13 +52,13 @@ Container includes a health check hitting the NZBGet web UI on port **6789**.
 
 ### Pull from GHCR (recommended)
 ```bash
-docker pull ghcr.io/pcoombe/docker-nzbget:latest
+docker pull ghcr.io/pcoombe/nzbget:latest
 docker run -d \
   --name nzbget \
   -p 6789:6789 \
   -v /path/to/config:/config \
   -v /path/to/downloads:/downloads \
-  ghcr.io/pcoombe/docker-nzbget:latest
+  ghcr.io/pcoombe/nzbget:latest
 ```
 
 ### Build locally
@@ -74,7 +74,7 @@ docker run -d \
 
 ## CI / CD
 
-[![CI & Publish](https://github.com/pcoombe/docker-nzbget/actions/workflows/ci.yml/badge.svg)](https://github.com/pcoombe/docker-nzbget/actions/workflows/ci.yml)
+[![CI & Publish](https://github.com/pcoombe/nzbget/actions/workflows/ci.yml/badge.svg)](https://github.com/pcoombe/nzbget/actions/workflows/ci.yml)
 
 - **CI & Publish** single workflow:
   - Runs on every PR/push to master – builds image and runs integration test against web UI

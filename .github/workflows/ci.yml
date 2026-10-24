@@ -11,7 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: nzbget
+  IMAGE_NAME: ${{ github.repository_owner }}/nzbget
 
 jobs:
   test:

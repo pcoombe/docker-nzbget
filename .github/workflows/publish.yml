@@ -61,5 +61,5 @@ jobs:
 
       - name: Run quick smoke test
         run: |
-          docker run --rm ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest nzbget --version
+          docker run --rm ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest nzbget -V
 

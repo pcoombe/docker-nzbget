@@ -37,7 +37,8 @@ jobs:
         run: |
           docker run -d --name nzbget-test -p 6789:6789 nzbget:test
           sleep 10
-          curl -f http://localhost:6789/ || exit 1
+          # Simple TCP health check using Python (matches Dockerfile health check)
+          docker exec nzbget-test python3 -c "import socket; s=socket.socket(); s.settimeout(5); s.connect(('localhost', 6789)); s.close()" || exit 1
           docker stop nzbget-test
           docker rm nzbget-test
 

@@ -64,6 +64,6 @@ RUN \
  ln -s /usr/bin/ffmpeg /usr/local/bin/ffmpeg && \
  ln -s /usr/bin/ffprobe /usr/local/bin/ffprobe
 
-# Health check
+# Health check - TCP port check using Python (no extra deps)
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://localhost:6789/ || exit 1
+    CMD python3 -c "import socket; s=socket.socket(); s.settimeout(5); s.connect(('localhost', 6789)); s.close()" || exit 1

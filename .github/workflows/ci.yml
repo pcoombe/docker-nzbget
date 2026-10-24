@@ -28,7 +28,7 @@ jobs:
 
       - name: Run smoke test
         run: |
-          docker run --rm --entrypoint nzbget nzbget:test -V
+          docker run --rm --entrypoint /usr/bin/nzbget nzbget:test -V
 
       - name: Test health check endpoint
         run: |

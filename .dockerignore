@@ -1,0 +1,25 @@
+# Git
+.git
+.gitignore
+
+# GitHub
+.github
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+
+# IDE/Editor
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.tar
+*.tar.gz

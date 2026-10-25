@@ -26,8 +26,8 @@ RUN apk add --no-cache \
     libmediainfo \
     python3 \
     py3-pip \
-    unrar \
     p7zip \
+    unar \
     curl \
     jq
 

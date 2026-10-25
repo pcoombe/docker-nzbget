@@ -22,7 +22,7 @@ NZBGet Docker container with dependencies for **sickbeard_mp4_automator** and ot
   - `python-qbittorrent` (qBittorrent)
 - Extras: `plexapi` (Plex notifications), `cleanit` (cleanup utility)
 
-- **Archive utilities**: `unrar` (RAR extraction), `p7zip` (7z), 
+- **Archive utilities**: `unar` (RAR extraction), `p7zip` (7z)
 
 - **Network tools**: `curl` (webhooks/API), `jq` (JSON parsing)
 

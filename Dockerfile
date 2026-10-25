@@ -27,7 +27,6 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     p7zip \
-    unar \
     curl \
     jq
 

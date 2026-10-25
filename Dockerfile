@@ -1,20 +1,21 @@
 FROM nzbgetcom/nzbget:v22.0
 
-LABEL maintainer="pcoombe" \
-    org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.name="NZBGet" \
-    org.label-schema.description="Nzbget container with dependencies for sickbeard_mp4_automator" \
-    org.label-schema.url="https://github.com/pcoombe/docker-nzbget" \
-    org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url="https://github.com/pcoombe/docker-nzbget" \
-    org.label-schema.vendor="pcoombe" \
-    org.label-schema.version=$VERSION \
-    org.label-schema.schema-version="1.0" \
-    org.opencontainers.image.source="https://github.com/pcoombe/docker-nzbget"
-
+ARG MAINTAINER
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
+
+LABEL maintainer="${MAINTAINER}" \
+    org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.name="NZBGet" \
+    org.label-schema.description="Nzbget container with dependencies for sickbeard_mp4_automator" \
+    org.label-schema.url="https://github.com/${MAINTAINER}/docker-nzbget" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-url="https://github.com/${MAINTAINER}/docker-nzbget" \
+    org.label-schema.vendor="${MAINTAINER}" \
+    org.label-schema.version=$VERSION \
+    org.label-schema.schema-version="1.0" \
+    org.opencontainers.image.source="https://github.com/${MAINTAINER}/docker-nzbget"
 
 WORKDIR /config
 
@@ -24,7 +25,11 @@ RUN apk add --no-cache \
     ffmpeg \
     libmediainfo \
     python3 \
-    py3-pip
+    py3-pip \
+    unrar \
+    p7zip \
+    curl \
+    jq
 
 # Install build dependencies, compile Python packages, then clean up
 RUN apk add --no-cache --virtual .build-deps \

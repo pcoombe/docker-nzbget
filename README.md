@@ -22,6 +22,10 @@ NZBGet Docker container with dependencies for **sickbeard_mp4_automator** and ot
   - `python-qbittorrent` (qBittorrent)
 - Extras: `plexapi` (Plex notifications), `cleanit` (cleanup utility)
 
+- **Archive utilities**: `unrar` (RAR extraction), `p7zip` (7z), 
+
+- **Network tools**: `curl` (webhooks/API), `jq` (JSON parsing)
+
 ## Multi-Architecture Support
 - **linux/amd64**
 - **linux/arm64**
@@ -74,7 +78,7 @@ docker run -d \
 
 ## CI / CD
 
-[![CI & Publish](https://github.com/pcoombe/nzbget/actions/workflows/ci.yml/badge.svg)](https://github.com/pcoombe/nzbget/actions/workflows/ci.yml)
+[![CI & Publish](https://github.com/pcoombe/docker-nzbget/actions/workflows/ci.yml/badge.svg)](https://github.com/pcoombe/docker-nzbget/actions/workflows/ci.yml)
 
 - **CI & Publish** single workflow:
   - Runs on every PR/push to master – builds image and runs integration test against web UI

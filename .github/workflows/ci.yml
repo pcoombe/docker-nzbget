@@ -32,6 +32,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64
+          build-args: |
+            MAINTAINER=${{ github.repository_owner }}
 
       - name: Test health check endpoint
         run: |
@@ -97,3 +99,4 @@ jobs:
             BUILD_DATE=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.created'] }}
             VCS_REF=${{ github.sha }}
             VERSION=${{ steps.version.outputs.version }}
+            MAINTAINER=${{ github.repository_owner }}
